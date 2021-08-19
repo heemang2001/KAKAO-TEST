@@ -30,12 +30,6 @@ string solution(string new_id)
 		new_id.erase(new_id.begin() + i);
 	}
 
-	if (new_id.size() == 1 && !((new_id.front() >= 'a' && new_id.front() <= 'z') || (new_id.front() >= '0' && new_id.front() <= '9')
-		|| (new_id.front() == '-') || (new_id.front() == '_') || (new_id.front() == '.')))
-	{
-		new_id.erase(new_id.begin());
-	}
-
 	// 3단계 : new_id에서 마침표(.)가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환합니다.
 	for (int i = 0; i < new_id.size(); i++)
 	{
